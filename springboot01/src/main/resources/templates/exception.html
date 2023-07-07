@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Example</title>
+</head>
+<body>
+<h1>exception: <span th:text="${exception}"></span></h1>
+<h1>message: <span th:text="${message}"></span></h1>
+<h1>status: <span th:text="${status}"></span></h1>
+
+
+<h1>StrackTrace:</h1>
+<table border="1">
+    <tr>
+        <th>StackTrace!!</th>
+
+    </tr>
+    <!--/*@thymesVar id="exception" type="java.lang.Throwable"*/-->
+    <tr th:each="strackTrace : ${exception.stackTrace}">
+        <!--/*@thymesVar id="strackTrace" type="java.lang.StackTraceElement"*/-->
+        <td th:text="${strackTrace}"/>
+    </tr>
+</table>
+</body>
+</html>

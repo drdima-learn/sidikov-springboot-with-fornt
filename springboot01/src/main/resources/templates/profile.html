@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Example</title>
+</head>
+<body>
+<!--/*@thymesVar id="user" type="com.rubincomputers.springboot01.dto.UserDTO"*/-->
+<h1>id: <span th:text="${user.id}"></span></h1>
+<h1>firstname: <span th:text="${user.firstName}"></span></h1>
+<h1>lastname: <span th:text="${user.lastName}"></span></h1>
+
+<br>
+<a href="/logout">Logout</a>
+
+
+</body>
+</html>
